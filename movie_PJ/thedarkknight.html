@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <title>The Dark Knight</title>
+    <style>
+        body {
+            background: #000;
+            width: 1200px;
+            height: 100%;
+            color: #fff;
+            margin: 0 auto;
+        }
+
+        body::before{
+            content: '';
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        
+        .video{
+            position: absolute;
+            width: 1200px;
+            height: 100%;
+            object-fit: fill;
+        }
+        
+        /*로고 설정*/
+        #logo {
+            position: absolute;
+            background-image: url(img/symbol/darkknight/logo.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center -100px;
+            width: 800px;
+            height: 250px;
+            margin: 0 auto;
+            top: 0;
+            transform: translatex(25%)
+            
+/*            outline: 2px solid lime;*/
+        }
+
+        #cont {
+            position: absolute;
+            bottom: 0;
+/*            left: 0;*/
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto;
+/*            outline: 2px solid red;*/
+            z-index: 1;
+        }
+
+        #cont>div {
+            float: left;
+            width: 150px;
+            margin: 0 75px;
+            text-align: center;
+/*            outline: 2px solid white;*/
+            cursor: pointer;    
+        }
+        .timg{
+            float: left;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+        .txt {
+            position: absolute;
+            bottom: 150px;
+            font-size: 11px;
+            width: 500px;
+            left: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height .4s ease-out, left .4s ease-out .4s, bottom .4s ease-out .8s, padding .4s;
+            background-color: rgba(80, 80, 80, 0.5);
+            
+        }
+        /*배트맨 설명박스*/
+        .char1{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb1:hover .char1{
+            bottom: 150px;
+            left: 450px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb1:hover .txt {
+            left: 30%;
+            padding: 10px;
+            bottom: 300px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+        /*조커 설명박스*/
+        .char2{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: height .4s ease-out, left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb2:hover .char2{
+            bottom: 150px;
+            left: 150px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb2:hover .txt {
+            left: 30%;
+            padding: 10px;
+            bottom: 300px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+        /*하비 설명박스*/
+        .char3{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb3:hover .char3{
+            bottom: 150px;
+            left: -150px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb3:hover .txt {
+            left: 30%;
+            bottom: 300px;
+            padding: 10px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+        /*고든 설명박스*/
+        .char4{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb4:hover .char4{
+            bottom: 150px;
+            left: -450px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb4:hover .txt {
+            left: 30%;
+            bottom: 300px;
+            padding: 10px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+   <!--**비디오**-->
+   <video src="mp4/dark_bg.mp4" class=video autoplay muted loop ></video>
+   
+    <!--A. 상단영역-->
+    <!--1. 로고-->
+    <a href="trilogy.html" target="_self">
+        <h1 id="logo"></h1>
+    </a>
+
+    <!--B. 메인영역-->
+    <!--2. 캐릭터 설명박스-->
+    <main id="cont" class="clb">
+        <!--2-1. 배트맨-->
+        <div class="tb1">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/darkknight/batman.jpg" alt="배트맨" class="timg">
+                <h2>BATMAN</h2>
+                <p>A billionaire socialite who, after witnessing his parents' death in a mugging at age 8, travels the world for seven years before returning home to operate as a bat-masked vigilante hailed as Gotham City's "Dark Knight", using fear against the city's criminal underworld at night. </p>
+                <p>Bale said he was confident in his choice to return in the role because of the positive response to his portrayal in Batman Begins.He continued training in the Keysi Fighting Method and performed many of his own stunts,but did not gain as much muscle as in the previous film because the new Batsuit allowed him to move with greater agility.</p>
+            </div>
+            <!--로고-->
+            <a href="" alt="배트맨 로고" class="char1"><img src="img/symbol/darkknight/batman_symbol.png" style="border-radius: 50%;background-color: black"></a>
+        </div>
+        <!--2-2. 조커-->
+        <div class="tb2">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/darkknight/joker.jpg" alt="조커" class="timg">
+                <h2>Joker</h2>
+                <p>A psychopathic illegalist mastermind portraying himself as an "agent of chaos", who rises from the criminal underworld by thrusting Gotham into anarchy and drawing Batman ever closer to crossing the fine line between heroism and vigilantism.</p>
+                <p>Before Ledger was cast in July 2006, Paul Bettany, Lachy Hulme, Adrien Brody, Steve Carell,and Robin Williams publicly expressed interest in it. However, Nolan had wanted to work with Ledger on a number of projects in the past and was agreeable to Ledger's chaotic interpretation of the character. </p>
+            </div>
+            <!--로고-->
+            <a href="" alt="조커 로고" class="char2"><img src="img/symbol/darkknight/joker_symbol.png" style="border-radius: 50%"></a>
+        </div>
+        <!--2-3. 하비-->
+        <div class="tb3">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/darkknight/harveydent.jpg" alt="하비덴트" class="timg">
+                <h2>Harvey Dent</h2>
+                <p>The district attorney hailed as Gotham's "White Knight", whose campaign against the criminal underworld leaves half of his face disfigured, turning him into a murderer with a split-personality bent on revenge.</p>
+                <p> Nolan and David S. Goyer had originally considered using Dent in Batman Begins, but they replaced him with the new character Rachel Dawes when they realized they "couldn't do him justice". Before Eckhart was cast in February 2007, Liev Schreiber, Josh Lucas, and Ryan Phillippe had expressed interest in the role, while Mark Ruffalo auditioned.</p>
+            </div>
+            <!--로고-->
+            <a href="" alt="하비덴트 로고" class="char3"><img src="img/symbol/darkknight/twoface_symbol.png"></a>
+        </div>
+        <!--2-4. 고든-->
+        <div class="tb4">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/darkknight/goden.jpg" alt="제임스고든" class="timg" >
+                <h2>James Gordon</h2>
+                <p>A lieutenant in the Gotham City Police Department and one of the city's few honest police officers, who forms a tenuous, unofficial alliance with Batman and Dent and is given the position of Police Commissioner by the city's mayor following the recent commissioner's assassination.</p>
+                <p>Oldman described his character as "incorruptible, virtuous, strong, heroic, but understated". Nolan explained, "The Long Halloween has a great, triangular relationship between Harvey Dent and Gordon and Batman, and that's something we very much drew from."</p>
+            </div>
+            <!--로고-->
+            <a href="" alt="고든 로고" class="char4"><img src="img/symbol/darkknight/police_symbol.png"></a>
+        </div>
+    </main>
+</body></html>

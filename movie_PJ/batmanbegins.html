@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <title>Batman Begins</title>
+    <style>
+        body {
+            background: #000;
+            width: 1200px;
+            height: 100%;
+            color: #fff;
+            margin: 0 auto;
+        }
+
+        body::before{
+            content: '';
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        
+        .video{
+            position: absolute;
+            width: 1200px;
+            height: 100%;
+            object-fit: fill;
+        }
+        
+        /*로고 설정*/
+        #logo {
+            position: absolute;
+            background-image: url(img/symbol/begins/logo.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center -125px;
+            width: 800px;
+            height: 250px;
+            margin: 0 auto;
+            top: 0;
+            transform: translatex(25%)
+            
+/*            outline: 2px solid lime;*/
+        }
+
+        #cont {
+            position: absolute;
+            bottom: 0;
+/*            left: 0;*/
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto;
+/*            outline: 2px solid red;*/
+            z-index: 1;
+        }
+
+        #cont>div {
+            float: left;
+            width: 150px;
+            margin: 0 125px;
+            text-align: center;
+/*            outline: 2px solid white;*/
+            cursor: pointer;    
+        }
+        .timg{
+            float: left;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+        .txt {
+            position: absolute;
+            bottom: 150px;
+            font-size: 11px;
+            width: 500px;
+            left: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height .4s ease-out, left .4s ease-out .4s, bottom .4s ease-out .8s, padding .4s;
+            background-color: rgba(80, 80, 80, 0.5);
+            
+        }
+        /*배트맨 설명박스*/
+        .char1{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb1:hover .char1{
+            bottom: 150px;
+            left: 400px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb1:hover .txt {
+            left: 28%;
+            padding: 10px;
+            bottom: 300px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+        /*라스알굴 설명박스*/
+        .char2{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: height .4s ease-out, left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb2:hover .char2{
+            bottom: 150px;
+            left: 0px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb2:hover .txt {
+            left: 28%;
+            padding: 10px;
+            bottom: 300px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+        /*스캘크로우 설명박스*/
+        .char3{
+            position: relative;
+            left: 0;
+            bottom: 0;
+            transition: left .4s ease-out .4s, bottom .4s ease-out .8s;
+        }
+        .tb3:hover .char3{
+            bottom: 150px;
+            left: -400px;
+            transition: left .4s ease-out, bottom .4s ease-out .4s;
+            z-index: 1;
+        }
+        .tb3:hover .txt {
+            left: 30%;
+            bottom: 300px;
+            padding: 10px;
+            height: 280px;
+            transition: height .4s ease-out .8s, bottom .4s ease-out .4s, padding .4s ease-out .5s;
+        }
+
+    </style>
+</head>
+
+<body>
+   <!--**비디오**-->
+   <video src="mp4/begins_bg.mp4" class=video autoplay muted loop ></video>
+   
+    <!--A. 상단영역-->
+    <!--1. 로고-->
+    <a href="trilogy.html" target="_self">
+        <h1 id="logo"></h1>
+    </a>
+
+    <!--B. 메인영역-->
+    <!--2. 캐릭터 설명박스-->
+    <main id="cont" class="clb">
+        <!--2-1. 배트맨-->
+        <div class="tb1">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/begins/batman.jpg" alt="배트맨" class="timg">
+                <h2>BATMAN</h2>
+                <p>A billionaire socialite who, after witnessing his parents' death in a mugging at age 8, travels around the world seven years before returning home to inherit his family company Wayne Enterprises whilst operating at night as a bat-masked vigilante bringing justice upon the criminal underworld of Gotham City.</p> <p>Bale was relatively unknown when cast. Before he was confirmed on September 11, 2003, having expressed interest in the role since Darren Aronofsky was planning his own film adaptation.</p>
+            </div>
+            <!--로고-->
+            <a href="" alt="배트맨 로고" class="char1"><img src="img/symbol/begins/batman_og.png" style="border-radius: 50%;background-color: black"></a>
+        </div>
+        <!--2-2. 라스알굴-->
+        <div class="tb2">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/begins/ra's.jpg" alt="라스알굴" class="timg">
+                <h2>Ra's al Ghul</h2>
+                <p>The leader of the League of Shadows, an ancient society that uses chaos to punish the corrupt and decadent, who goes undercover as an associate of the League and trains Bruce in martial arts, later revealing himself in the film's climax.</p> <p>Writer David Goyer said he felt he was the most complex of all the Batman villains, comparing him to Osama bin Laden; "He's not crazy in the way that all the other Batman villains are. He's not bent on revenge; he's actually trying to heal the world.</p>
+            </div>
+            <!--로고-->
+            <a href="" alt="라스알굴 로고" class="char2"><img src="img/symbol/begins/ras_al_ghul_symbol.png" style="border-radius: 50%;background-color: black"></a>
+        </div>
+        <!--2-3. 스캘크로우-->
+        <div class="tb3">
+            <!--설명박스-->
+            <div class="txt">
+                <img src="img/charactor/begins/scarecrow.jpg" alt="스캘크로우" class="timg">
+                <h2>Scarecrow</h2>
+                <p>A corrupt psychopharmacologist working as Chief Administrator of Arkham Asylum. A specialist in the psychology of fear, he has secretly created a fear-inducing toxin and plots with Ra's al Ghul to expose the entire Gotham population.</p> <p>Nolan decided against casting an Irish actor like Murphy for Batman, before casting him as Scarecrow. Murphy read numerous comics featuring the Scarecrow and discussed making the character look less theatrical with Nolan.</p>
+            </div>
+            <!--로고-->
+            <a href="" alt="스캘크로우 로고" class="char3"><img src="img/symbol/begins/scarecrow_symbol.png" style="border-radius: 50%;background-color: black"></a>
+        </div>
+    </main>
+</body></html>
